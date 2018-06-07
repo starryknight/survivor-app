@@ -10,6 +10,8 @@ const survivorSchema = new Schema({
     type: Date,
     default: new Date()
   },
+  location:String,
+  photo:String,
   diagnosis: String,
   sex: String,
   ssn:Number
