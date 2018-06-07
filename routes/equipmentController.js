@@ -1,53 +1,53 @@
 
 const express = require('express')
 const router = express.Router({ mergeParams: true })
-const Homework = require('../models/Homework')
-const Comment = require('../models/Comment')
+const Survivor = require('../models/Survivor')
+const Equipment = require('../models/Equipment')
 
 /* GET listing. */
 
 router.get('/', (req, res, next) => {
 
-  // use homeworkID to find Homework assignment
-  Homework.findById(req.params.homeworkId)
-    .then((homework) => {
-      const comments = homework.comments
-      res.render('comment/index', {
-        comments
+  // use survivorId to find Survivor assignment
+  Survivor.findById(req.params.survivorId)
+    .then((survivor) => {
+      const equipments = survivor.equipment
+      res.render('equipment/index', {
+        equipments
       })
     })
 
-  // take the comments and apply them to a 
+  // take the equipment and apply them to a 
   // hbs file
 })
 
 // NEW Route
 router.get('/new', (req, res) => {
-  res.render('comment/new', {
-    homeworkId: req.params.homeworkId
+  res.render('equipment/new', {
+    survivorId: req.params.survivorId
   })
 })
 
 // CREATE Route
 router.post('/', (req, res) => {
 
-  // make comment req.body
-  const comment = new Comment(req.body)
+  // make equipment req.body
+  const equipment = new Equipment(req.body)
 
-  // get homework assignment by the id
-  Homework.findById(req.params.homeworkId)
-    .then((homeworkAssignment) => {
+  // get survivor assignment by the id
+  Survivor.findById(req.params.survivorId)
+    .then((survivorInstance) => {
 
-      // push new comment to comments
-      homeworkAssignment.comments.push(comment)
+      // push new equipment to equipments
+      survivorInstance.equipments.push(equipment)
 
-      // save the homework assignment
-      return homeworkAssignment.save()
+      // save the survivor assignment
+      return survivorInstance.save()
     })
     .then(() => {
 
-      // redirect to comments
-      res.redirect(`/homework/${req.params.homeworkId}/comment`)
+      // redirect to equipments
+      res.redirect(`/survivor/${req.params.survivorId}/equipment`)
     })
 })
 

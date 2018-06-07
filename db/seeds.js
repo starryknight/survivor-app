@@ -43,8 +43,8 @@ Survivor.remove()
         picture:"https://www.istockphoto.com/photo/dog-with-a-broken-leg-gm477712115-36077032"
     })
 
-    // create new test Homework data
-    const homework1 = new Homework({
+    // create new test survivor data
+    const survivor1 = new Survivor({
         firstName: "Zili",
         lastName: "Zala",
         description: "found after turning over a rock near the river",
@@ -60,7 +60,7 @@ Survivor.remove()
         medicals: [ medical1 ],
         equipments: [equipment2]
     })
-    const homework2 = new Homework({
+    const survivor2 = new Survivor({
         firstName: "Zili",
         lastName: "Zala",
         description: "found after turning over a rock near the river",
@@ -76,7 +76,7 @@ Survivor.remove()
       medicals: [ medical2 ],
       equipments: [equipment2]
     })
-    const homework3 = new Homework({
+    const survivor3 = new Survivor({
         firstName: "xavier",
         lastName: "Johnson",
         description: "found in an abandoned building",
@@ -92,7 +92,7 @@ Survivor.remove()
         medicals: [ medical1 ],
         equipments: [equipment1]
     })
-    const homework4 = new Homework({
+    const survivor4 = new Survivor({
         firstName: "Smikun",
         lastName: "Shikimita",
         description: "found in the forest lying face down",

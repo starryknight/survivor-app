@@ -1,53 +1,53 @@
 
 const express = require('express')
 const router = express.Router({ mergeParams: true })
-const Homework = require('../models/Homework')
-const Comment = require('../models/Comment')
+const Survivor = require('../models/Survivor')
+const Medical = require('../models/Medical')
 
 /* GET listing. */
 
 router.get('/', (req, res, next) => {
 
-  // use homeworkID to find Homework assignment
-  Homework.findById(req.params.homeworkId)
-    .then((homework) => {
-      const comments = homework.comments
-      res.render('comment/index', {
-        comments
+  // use survivorId to find Survivor assignment
+  Survivor.findById(req.params.survivorId)
+    .then((survivor) => {
+      const medicals = survivor.medicals
+      res.render('medical/index', {
+        medicals
       })
     })
 
-  // take the comments and apply them to a 
+  // take the medical and apply them to a 
   // hbs file
 })
 
 // NEW Route
 router.get('/new', (req, res) => {
-  res.render('comment/new', {
-    homeworkId: req.params.homeworkId
+  res.render('medical/new', {
+    survivorId: req.params.survivorId
   })
 })
 
 // CREATE Route
 router.post('/', (req, res) => {
 
-  // make comment req.body
-  const comment = new Comment(req.body)
+  // make medical req.body
+  const medical = new Medical(req.body)
 
-  // get homework assignment by the id
-  Homework.findById(req.params.homeworkId)
-    .then((homeworkAssignment) => {
+  // get survivor assignment by the id
+  Survivor.findById(req.params.survivorId)
+    .then((survivorInstance) => {
 
-      // push new comment to comments
-      homeworkAssignment.comments.push(comment)
+      // push new medical to medicals
+      survivorInstance.medicals.push(medical)
 
-      // save the homework assignment
-      return homeworkAssignment.save()
+      // save the survivor assignment
+      return survivorInstance.save()
     })
     .then(() => {
 
-      // redirect to comments
-      res.redirect(`/homework/${req.params.homeworkId}/comment`)
+      // redirect to medicals
+      res.redirect(`/survivor/${req.params.survivorId}/medical`)
     })
 })
 

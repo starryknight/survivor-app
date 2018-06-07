@@ -15,11 +15,11 @@ const Survivor = require('../models/Survivor')
 router.get('/', (req, res, next) => {
 
   // Find all Survivors
-  Homework
+  Survivor
     .find()
     .then((listOfSurvivors) => {
 
-      // Once you have all survivor, then render out index page homeworks is all
+      // Once you have all survivor, then render out index page survivors is all
       // pieces of data that match the Survivor Model
       res.render('survivor/index', { listOfSurvivors: listOfSurvivors })
     })
@@ -35,7 +35,7 @@ router.get('/new', (req, res) => {
 // CREATE Route
 router.post('/', (req, res) => {
   const newSurvivor = req.body
-  Homework
+  Survivor
     .create(newSurvivor)
     .then(() => {
       res.redirect('/survivor')
