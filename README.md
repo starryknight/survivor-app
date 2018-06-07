@@ -2,13 +2,13 @@
 This is a Disaster Management App called Survivor for managing survivors of any disaster
 
 
-# wireframe
+## wireframe
 please find the wireframe via the following link
 ```
 https://www.figma.com/file/OFvOgwtU5hR36ugTSVevPo9m/new?node-id=1%3A44
 
 ```
-# Trello
+## Trello
 
 Please find the user stories via the following link
 ```
