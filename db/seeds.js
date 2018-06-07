@@ -15,16 +15,31 @@ mongoose.connect('mongodb://localhost/survivor-app')
 // Remove old Homework Data
 Homework.remove()
   .then(() => {
-    const comment1 = new Comment({
-      body: 'hello',
-      submittedBy: 'coffee',
-      score: 3
+      // Medical data
+    const medical1 = new Medical({
+        type: "vicodin 325mg",
+        quantity: 2,
+        frequency: "once daily"
     })
 
-    const comment2 = new Comment({
-      body: 'bywe',
-      submittedBy: 'fdsafsf',
-      score: 3
+    const medical2 = new Medical({
+        type: "celexa 20mg",
+        quantity: 30,
+        frequency: "twice daily"
+    })
+
+    // Equipment data
+    const equipment1 = new Equipment({
+        type: "cast",
+        size: 5,
+        quantity: 1,
+        picture:"https://www.istockphoto.com/photo/broken-leg-in-cast-with-drawing-path-gm514882663-48394838"
+    })
+    const equipment2 = new Equipment({
+        type: "blackboard",
+        size: 3,
+        quantity: 1,
+        picture:"https://www.istockphoto.com/photo/dog-with-a-broken-leg-gm477712115-36077032"
     })
 
     // create new test Homework data

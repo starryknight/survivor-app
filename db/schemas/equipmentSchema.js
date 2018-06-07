@@ -1,9 +1,10 @@
 const Schema = require('mongoose').Schema
 
 const equipmentSchema = new Schema({
-  body: String,
-  submittedBy: String,
-  score: Number
+  type: String,
+  size: Number,
+  quantity: Number,
+  picture:String
 })
 
 module.exports = equipmentSchema

@@ -1,9 +1,9 @@
 const Schema = require('mongoose').Schema
 
 const medicalSchema = new Schema({
-  body: String,
-  submittedBy: String,
-  score: Number
+  type: String,
+  quantity: Number,
+  frequency: String
 })
 
 module.exports = medicalSchema
