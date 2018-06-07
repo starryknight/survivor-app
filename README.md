@@ -7,8 +7,9 @@ please find the wireframe via the following link
 ```
 https://www.figma.com/file/OFvOgwtU5hR36ugTSVevPo9m/new?node-id=1%3A44
 
+```
+# Trello
 
-# Trello 
-please find the Trello via the following link
+Please find the user stories via the following link
 ```
 https://trello.com/b/kdtZCMwH/survivor-app
