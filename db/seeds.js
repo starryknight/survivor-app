@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
-const Homework = require('../models/S')
-const Comment = require('../models/Comment')
+const Survivor = require('../models/Survivor')
+const Medical = require('../models/Medical')
+const Equipment = require('../models/Equipment')
 
 // Connect to Database
-mongoose.connect('mongodb://localhost/homework-helper')
+mongoose.connect('mongodb://localhost/survivor-app')
   .then(() => {
     console.log('connected to mongoDB')
   })
