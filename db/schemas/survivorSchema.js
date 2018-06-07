@@ -14,8 +14,8 @@ const survivorSchema = new Schema({
   photo:String,
   diagnosis: String,
   sex: String,
-  ssn:Number
-  medicals: [ medicalSchema ]
+  ssn:Number,
+  medicals: [ medicalSchema ],
   equipments: [equipmentSchema]
 })
 

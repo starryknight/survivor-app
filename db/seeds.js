@@ -12,9 +12,10 @@ mongoose.connect('mongodb://localhost/survivor-app')
     console.log('ERROR', err)
   })
 
-// Remove old Homework Data
-Homework.remove()
+// Remove old Survivor Data
+Survivor.remove()
   .then(() => {
+
       // Medical data
     const medical1 = new Medical({
         type: "vicodin 325mg",
@@ -48,32 +49,32 @@ Homework.remove()
         lastName: "Zala",
         description: "found after turning over a rock near the river",
         dateOfBirth: {
-          type: Date,
-          default: new Date()
+        type: Date,
+        default: new Date()
         },
-        location:"<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>"
+        location:"https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863",
         photo:"https://www.shutterstock.com/image-illustration/zombie-loonies-3d-illustration-705408514",
         diagnosis: "Diabetic",
         sex: Male,
-        ssn:1011
-        medicals: [ medicalSchema ]
-        equipments: [equipmentSchema]
+        ssn:1011,
+        medicals: [ medical1 ],
+        equipments: [equipment2]
     })
     const homework2 = new Homework({
-      tfirstName: "Zili",
-      lastName: "Zala",
-      description: "found after turning over a rock near the river",
-      dateOfBirth: {
+        firstName: "Zili",
+        lastName: "Zala",
+        description: "found after turning over a rock near the river",
+        dateOfBirth: {
         type: Date,
         default: new Date()
       },
-      location:"<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>"
+      location:"https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863",
       photo:"https://www.shutterstock.com/image-illustration/zombie-loonies-3d-illustration-705408514",
       diagnosis: "Diabetic",
-      sex: Male,
-      ssn:7899
-      medicals: [ medicalSchema ]
-      equipments: [equipmentSchema]
+      sex: "Male",
+      ssn:7899,
+      medicals: [ medical2 ],
+      equipments: [equipment2]
     })
     const homework3 = new Homework({
         firstName: "xavier",
@@ -83,13 +84,13 @@ Homework.remove()
           type: Date,
           default: new Date()
         },
-        location:"<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>"
+        location:"https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863",
         photo:"https://www.shutterstock.com/image-illustration/zombie-loonies-3d-illustration-705408514",
         diagnosis: "High blood pressure",
         sex: Male,
-        ssn:2009
-        medicals: [ medicalSchema ]
-        equipments: [equipmentSchema]
+        ssn:2009,
+        medicals: [ medical1 ],
+        equipments: [equipment1]
     })
     const homework4 = new Homework({
         firstName: "Smikun",
@@ -99,12 +100,12 @@ Homework.remove()
           type: Date,
           default: new Date()
         },
-        location:"<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>"
+        location:"https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37776.054673827144!2d-84.4382320747451!3d33.747881068390456!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1528386163863",
         photo:"https://www.shutterstock.com/image-illustration/zombie-loonies-3d-illustration-705408514",
         diagnosis: "broken leg",
         sex: Male,
-        ssn:1765
-        medicals: [ medicalSchema ]
+        ssn:1765,
+        medicals: [ medical2 ],
         equipments: [equipmentSchema]
     })
 

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const commentSchema = require('../db/schemas/equipmentSchema')
+const equipmentSchema = require('../db/schemas/equipmentSchema')
 
-const Equipment = mongoose.model('comment', equipmentSchema)
+const Equipment = mongoose.model('equipment', equipmentSchema)
 
 module.exports = Equipment

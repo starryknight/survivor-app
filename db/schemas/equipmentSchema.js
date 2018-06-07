@@ -6,5 +6,4 @@ const equipmentSchema = new Schema({
   quantity: Number,
   picture:String
 })
-
 module.exports = equipmentSchema
