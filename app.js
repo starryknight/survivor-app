@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
-const homeworkController = require('./routes/survivorController')
+const survivorController = require('./routes/survivorController')
 const medicalController = require('./routes/medicalController')
 const equipmentController = require('./routes/equipmentController')
 
@@ -36,8 +36,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/survivor', survivorController)
-app.use('/survivor/:survivorID/medical', medicalController)
-app.use('/survivor/:survivorID/equipment', equipmentController)
+//app.use('/survivor/:survivorID/medical', medicalController)
+//app.use('/survivor/:survivorID/equipment', equipmentController)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
