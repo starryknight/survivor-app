@@ -2,11 +2,11 @@
 <p><img src="{{survivorInstance.photo}}" alt="(picture goes here)" style="width:200, height:200"></p>
 
 <h1>{{survivorInstance.firstName}}</h1>
-<h3>Due By: {{survivorInstance.lastName}}</h3>
-<p>Description: {{survivorInstance.dateOfBirth}}</p>
+<h3>Last name: {{survivorInstance.lastName}}</h3>
+<p>Rescued on: {{survivorInstance.dateOfBirth}}</p>
 
-<iframe src="{{location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="{{survivorInstance.location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-<form action="/homework/{{survivorInstance._id}}?_method=DELETE" method="POST">
-  <button type="submit">Delete Homework</button>
+<form action="/survivor/{{survivorInstance._id}}?_method=DELETE" method="POST">
+  <button type="submit">Remove Survivor</button>
 </form>

@@ -7,7 +7,7 @@
       <p>{{firstName}} - {{lastName}}</p>
       <p><img src="{{photo}}" alt="(picture goes here)" style="width:200, height:200"></p>
       <p>{{description}}</p>
-      <p>{{dueDate}}</p>
+      
       <p>{{dateOfBirth}}</p>
       <p>
       {{!-- <iframe src="{{location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
@@ -21,6 +21,9 @@
     </a>
   </li>
   {{/each}}
+  {{#each listOfSurvivors}}<a href="/survivor/{{_id}}">
+  <p><img src="{{photo}}" alt="(picture goes here)" style="width:200, height:200"></p>
+  </a>{{/each}}
 </ul>
 
   
