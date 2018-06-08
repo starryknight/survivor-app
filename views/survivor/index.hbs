@@ -21,9 +21,35 @@
     </a>
   </li>
   {{/each}}
-  {{#each listOfSurvivors}}<a href="/survivor/{{_id}}">
+  {{!-- {{#each listOfSurvivors}}<a href=>
+  
   <p><img src="{{photo}}" alt="(picture goes here)" style="width:200, height:200"></p>
-  </a>{{/each}}
+  </a>{{/each}} --}}
+  
+  
+  {{#each listOfSurvivors}}
+  <div id="scroller">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{photo}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Survivor</h5>
+    <p class="card-text">{{description}}...</p>
+    <a href="/survivor/{{_id}}" class="btn btn-primary">See details</a>
+  </div>
+</div>
+  </div>
+  {{/each}}
+  
+  
+  
+  
+  
+  
+  
+  
+  <form action="/survivor/new">
+    <input type="submit" value="Create a New Survivor" />
+</form>
 </ul>
 
   
