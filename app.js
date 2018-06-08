@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/survivor', survivorController)
-//app.use('/survivor/:survivorID/medical', medicalController)
+app.use('/survivor/:survivorID/medical', medicalController)
 app.use('/survivor/:survivorID/equipment', equipmentController)
 
 // catch 404 and forward to error handler
