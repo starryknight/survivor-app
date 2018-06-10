@@ -11,7 +11,7 @@ const indexRouter = require('./routes/index')
 const survivorController = require('./routes/survivorController')
 const medicalController = require('./routes/medicalController')
 const equipmentController = require('./routes/equipmentController')
-
+const uploadController = require('./routes/uploadController')
 const app = express()
 
 // Connect to Database
@@ -38,7 +38,7 @@ app.use('/', indexRouter)
 app.use('/survivor', survivorController)
 app.use('/survivor/:survivorID/medical', medicalController)
 app.use('/survivor/:survivorID/equipment', equipmentController)
-
+// app.use('/upload', uploadController)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404))

@@ -16,3 +16,8 @@ https://www.figma.com/file/OFvOgwtU5hR36ugTSVevPo9m/new?node-id=1%3A44
 Please find the user stories via the following link
 ```
 https://trello.com/b/kdtZCMwH/survivor-app
+
+```
+## Resources
+
+
