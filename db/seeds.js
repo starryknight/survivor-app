@@ -54,8 +54,8 @@ Survivor.remove()
         diagnosis: "Diabetic",
         sex: "Male",
         ssn:1011,
-        medicals: [ medical1 ],
-        equipments: [equipment2]
+        medicals:  medical1 ,
+        equipments: equipment2
     })
 
     const survivor2 = new Survivor({

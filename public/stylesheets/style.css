@@ -19,3 +19,10 @@ body {
   background: none;
 
 }
+.btn-danger{
+  padding:2px;
+  color:grey;
+  border-color: grey;
+  background: none;
+
+}
