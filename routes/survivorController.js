@@ -76,4 +76,9 @@ router.delete('/:id', (req, res) => {
     })
 })
 
+//------upload------
+router.get('/upload', (req, res) => {
+  res.render('survivor/upload')
+})
+
 module.exports = router

@@ -5,6 +5,8 @@ var upload = multer({ dest: 'public/uploads' })
 
 router.post('/upload', upload.single(), function (req, res, next) {
   req.send(req.files)
-  res.render('survivor/upload')
+ 
   
 })
+
+
