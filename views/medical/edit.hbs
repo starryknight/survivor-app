@@ -1,0 +1,26 @@
+
+<h1>Edit {{survivorInstance.firstName}}</h1>
+
+<form action="/survivor/{{survivorInstance._id}}?_method=PUT" method="POST">
+
+    <div>
+        <label for="title">Last Name</label>
+        <input type="text" name="lastName" value={{survivorInstance.lastName}} />
+    </div>
+    <div>
+        <label for="description">Date of rescue</label>
+        <textarea type="text" name="dateOfBirth">{{survivorInstance.dateOfBirth}}</textarea>
+    </div>
+    <div>
+        <label for="subject">Diagnosis</label>
+        <input type="text" name="subject" value={{survivorInstance.subject}} />
+    </div>
+    <div>
+        <label for="createdBy">Sex</label>
+        <input type="text" name="createdBy" value={{survivorInstance.createdBy}} />
+    </div>
+    <div>
+        <label for="dueDate">Social security number</label>
+        <input type="date" name="ssn" value={{survivorInstance.ssn}} />
+    </div>
+    <button type="submit">Update</button>

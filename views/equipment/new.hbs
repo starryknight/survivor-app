@@ -1,0 +1,51 @@
+<h1>Create New Equipment</h1>
+
+{{!-- <form action="/homework/{{survivorId}}/comment" method="POST">
+  <div>
+    <label for="body">type</label>
+    <input type="text" name="type" placeholder="type..." />
+  </div>
+  <div>
+    <label for="size">size</label>
+    <input type="text" name="size" placeholder="size..." />
+  </div>
+   <div>
+    <label for="quantity">Quantity</label>
+    <input type="text" name="quantity" placeholder="qty..." />
+  </div>
+  <div>
+    <label for="picture">Picture</label>
+    <input type="text" name="picture" placeholder="picture..." />
+  </div> --}}
+
+
+
+  <form action="/survivor/{{survivorId}}/equipment" method="POST">
+
+  <div class="form-group">
+    <label for="type"> type</label>
+    <input type="type" class="form-control" id="type" name="type" aria-describedby="emailHelp" placeholder="type">
+</div>
+  <div class="form-group">
+    <label for="size">size</label>
+    <input type="size" class="form-control" id="size" name="size" placeholder="size">
+  </div>
+  <div class="form-group">
+    <label for="quantity">quantity</label>
+    <input type="quantity" name="quantity" class="form-control" id="exampleInputPassword1" placeholder="quantity">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">picture</label>
+    <input type="picture" class="form-control" id="picture" name="picture" placeholder="picture">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Complete</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit New equipment</button>
+</form>
+
+
+
+  {{!-- <button type="submit">Save Equipment</button>
+</form> --}}
