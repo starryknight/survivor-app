@@ -6,18 +6,20 @@
 <p>Rescued on: {{survivorInstance.dateOfBirth}}</p>
 
 <iframe src="{{survivorInstance.location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<br>
+<div class="btn-group" role="group" aria-label="Basic example"></div>
 
-<form action="/survivor/{{survivorInstance._id}}?_method=DELETE" method="POST">
-  <button type="submit">Remove Survivor</button>
-</form>
-<a href="/survivor/{{survivorInstance._id}}/edit">
-  <button type="submit">Edit details</button>
-</a>
-<a href="/survivor/{{survivorInstance._id}}/edit" download>
-  <button type="submit">Download details</button>
-</a>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+
+  <form action="/survivor/{{survivorInstance._id}}?_method=DELETE" method="POST">
+ 
+  <button type="submit" class="btn btn-secondary">Remove Survivor</button>
+  </form>
+  <a href="/survivor/{{survivorInstance._id}}/edit">
+ 
+  <button type="submit" class="btn btn-secondary">Edit details</button>
+  </a>
+  <a href="/survivor/{{survivorInstance._id}}/edit" download>
+  <button type="submit" class="btn btn-secondary">Download details</button>
+  </a>
 </div>
