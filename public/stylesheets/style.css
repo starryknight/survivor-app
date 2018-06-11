@@ -1,18 +1,20 @@
 body {
-  width:100vh;
-  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
+.carousel{
+  margin:10%;
+}
 
 #arranger{
   display: flex;
-  flex-wrap: wrap;
   margin-top:10px;
 }
 .card-img-top{
   height:20em;
 
+}
+.btn{
+  margin:3%;
 }
 .btn-primary{
   padding:2px;
@@ -27,4 +29,11 @@ body {
   border-color: grey;
   background: none;
 
+}
+.showButton{
+  margin:1%;
+}
+.showFooter{
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -8,7 +8,7 @@ const Equipment = require('../models/Equipment')
 
 router.get('/', (req, res, next) => {
 
-  // use survivorId to find Survivor assignment
+  
   Survivor.findById(req.params.survivorId)
     .then((survivor) => {
       const equipments = survivor.equipment
@@ -17,8 +17,7 @@ router.get('/', (req, res, next) => {
       })
     })
 
-  // take the equipment and apply them to a 
-  // hbs file
+  
 })
 
 // NEW Route

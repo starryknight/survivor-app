@@ -9,17 +9,73 @@
 <br>
 <div class="btn-group" role="group" aria-label="Basic example"></div>
 
-<div class="btn-group" role="group" aria-label="Basic example">
+<div class="btn-group showFooter" role="group" aria-label="Basic example">
 
-  <form action="/survivor/{{survivorInstance._id}}?_method=DELETE" method="POST">
+  <form class="showButton" action="/survivor/{{survivorInstance._id}}?_method=DELETE" method="POST">
  
   <button type="submit" class="btn btn-secondary">Remove Survivor</button>
   </form>
-  <a href="/survivor/{{survivorInstance._id}}/edit">
+  <a class="showButton" href="/survivor/{{survivorInstance._id}}/edit">
  
   <button type="submit" class="btn btn-secondary">Edit details</button>
   </a>
-  <a href="/survivor/{{survivorInstance._id}}/edit" download>
+  <a class="showButton" href="/survivor/{{survivorInstance._id}}/edit" download>
   <button type="submit" class="btn btn-secondary">Download details</button>
   </a>
 </div>
+
+
+
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Equipment Required</span>
+                        {{#each survivorInstance.equipments}}
+                        <span class="badge badge-secondary badge-pill">Qty: {{quantity}}</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Type</h6>
+                                <small class="text-muted">{{type}}</small>
+                            </div>
+                            <span class="text-muted">Size: {{size}}</span>
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="{{picture}}" alt="">
+                    </div>
+
+                    {{/each}} 
+                    
+                    {{#each survivorInstance.medicals}}
+                    <ul class="list-group mb-3">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Medication Required</span>
+                            <span class="badge badge-secondary badge-pill">Qty: {{quantity}}</span>
+                        </h4>
+
+
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                                <h6 class="my-0">Prescription</h6>
+                                <small>{{type}}</small>
+                            </div>
+
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Frequency</span>
+                            <strong>Take {{frequency}}</strong>
+                        </li>
+                        {{/each}}
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Patient's ailment</span>
+                            <strong>{{survivorInstance.diagnosis}}</strong>
+                        </li>
+                    </ul>
+
+
+
+
+
+                
