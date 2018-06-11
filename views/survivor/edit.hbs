@@ -140,6 +140,16 @@
 
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label for="username">Location Victim was Found</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input type="text" class="form-control" id="location" placeholder="location" name="location" value="{{survivorInstance.location}}">
+
+                            </div>
+                        </div>
 
 
                         <div class="mb-3">
@@ -170,7 +180,7 @@
               </div>
               <div class="col-md-4 mb-3 ">
                 <label for="date ">Date Discovered</label>
-                    <input type="date " class="form-control " id="date " value="{{survivorInstance.dateOfBirth}} ">
+                    <input type="date" class="form-control " id="date " value="{{survivorInstance.dateOfBirth}} ">
 
                 <div class="invalid-feedback ">
                   Please provide a valid sex.
