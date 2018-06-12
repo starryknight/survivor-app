@@ -41,3 +41,9 @@ body {
 .newEquipment{
   margin:2%;
 }
+h1{
+  font-family: 'Bangers', cursive;
+  color:#dc3545; 
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+}
