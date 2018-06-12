@@ -1,16 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-// /* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-
-// module.exports = router
-
 const Survivor = require('../models/Survivor')
 
-/* GET survivor listing. */
+
 // localhost/survivor
 router.get('/', (req, res, next) => {
 
@@ -19,15 +12,13 @@ router.get('/', (req, res, next) => {
     .find()
     .then((listOfSurvivors) => {
 
-      // Once you have all survivor, then render out index page survivors is all
-      // pieces of data that match the Survivor Model
       res.render('survivor/index', { listOfSurvivors: listOfSurvivors })
     })
     .catch((err) => res.send(err))
 
 })
 
-// NEW Route
+//-----NEW Route------
 router.get('/new', (req, res) => {
   res.render('survivor/new')
 })
@@ -42,7 +33,7 @@ router.post('/', (req, res) => {
     })
 })
 
-// SHOW Route
+//------SHOW Route--------
 router.get('/:id', (req, res) => {
   Survivor
     .findById(req.params.id)
@@ -51,7 +42,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// EDIT Route
+//----EDIT Route-------
 router.get('/:id/edit', (req, res) => {
   Survivor
     .findById(req.params.id)
@@ -60,14 +51,14 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
-// UPDATE Route
+//-----UPDATE Route--------
 router.put('/:id', (req, res) => {
   Survivor.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
     res.redirect(`/survivor/${req.params.id}`)
   })
 })
 
-// DELETE Route
+//----DELETE Route--------
 router.delete('/:id', (req, res) => {
   Survivor.findByIdAndRemove(req.params.id)
     .then(() => {
@@ -76,7 +67,7 @@ router.delete('/:id', (req, res) => {
     })
 })
 
-//------upload------
+//------UPLOAD Route------
 router.get('/upload', (req, res) => {
   res.render('survivor/upload')
 })
