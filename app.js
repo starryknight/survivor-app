@@ -7,6 +7,8 @@ const logger = require('morgan')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 
+
+
 const indexRouter = require('./routes/index')
 const survivorController = require('./routes/survivorController')
 const medicalController = require('./routes/medicalController')
@@ -15,7 +17,8 @@ const uploadController = require('./routes/uploadController')
 const app = express()
 
 // Connect to Database
-mongoose.connect('mongodb://localhost/survivor-app')
+require('dotenv').config()
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('connected to mongoDB')
   })
