@@ -1,8 +1,8 @@
 <h1>
     <a href="/survivor" class="btn btn-primary">Home</a>
 </h1>
-<form  action="/survivors/{{survivorId}}/equipment" method="POST">
-<div>
+<form action="/survivors/{{survivorId}}/equipment" method="POST">
+    <div>
         <label for="title">Last Name</label>
         <input type="text" name="lastName" value={{survivorInstance.lastName}} />
     </div>
@@ -14,11 +14,11 @@
         <label for="subject">Diagnosis</label>
         <input type="text" name="subject" value={{survivorInstance.subject}} />
     </div>
-    <div >
+    <div>
         <label for="createdBy">Sex</label>
         <input type="text" name="createdBy" value={{survivorInstance.createdBy}} />
     </div>
-    <div >
+    <div>
         <label for="dueDate">Social security number</label>
         <input type="date" name="ssn" value={{survivorInstance.ssn}} />
     </div>

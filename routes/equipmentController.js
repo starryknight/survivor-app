@@ -8,7 +8,7 @@ const Equipment = require('../models/Equipment')
 
 router.get('/', (req, res, next) => {
 
-  
+
   Survivor.findById(req.params.survivorId)
     .then((survivor) => {
       console.log("survivor")
@@ -20,13 +20,11 @@ router.get('/', (req, res, next) => {
         equipments
       })
     })
-
-  
 })
 
 // NEW Route
 router.get('/new', (req, res) => {
-  
+
   res.render('equipment/new', {
     survivorId: req.params.survivorId
   })

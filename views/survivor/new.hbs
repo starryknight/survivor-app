@@ -1,55 +1,7 @@
-{{!--
-<h1>
-  <a href="/survivor" class="btn btn-primary">Home</a>
-</h1>
-<h1>Create New Survivor Instance</h1>
-
-<form action="/survivor" method="POST">
-
-  <div>
-    <label for="title">Survivor Title</label>
-    <input type="text" name="title" placeholder="Survivor Title" />
-  </div>
-  <div>
-    <label for="description">Survivor Description</label>
-    <textarea type="text" name="description" placeholder="Survivor Description"></textarea>
-  </div>
-  <div>
-    <label for="subject">Survivor subject</label>
-    <input type="text" name="subject" placeholder="Survivor subject" />
-  </div>
-  <div>
-    <label for="createdBy">Survivor createdBy</label>
-    <input type="text" name="createdBy" placeholder="Survivor createdBy" />
-  </div>
-  <div>
-    <label for="dueDate">Survivor dueDate</label>
-    <input type="date" name="dueDate" />
-  </div>
-  <button type="submit">Save Survivor</button>
-</form> --}}
-
-
-
-
-
-
-
-
-
 <h1>
   <a href="/survivor" class="btn btn-primary">Home</a>
 </h1>
 <h2 class="text-center"> New survivor </h2>
-
-
-
-
-
-
-
-
-
 <div class="col-md-8 order-md-1">
 
   <form class="needs-validation" action="/survivor" method="POST" novalidate>
@@ -134,29 +86,10 @@
 </div>
 
 <div class="row ">
-  <div class="col-md-3 mb-3 ">
-    <label for="medicals ">Medical State</label>
-    <select class="custom-select d-block w-100 " id="medicals" name="medicals" required>
-      <option value=" ">Choose...</option>
-      <option>medical1</option>
-      <option>medical2</option>
-    </select>
+  <h2>Go to Individual's Edit page to add Medical State and Equipment</h2>
 
-  </div>
-
-  <div class="row ">
-    <div class="col-md-3 mb-3 ">
-      <label for="equipment ">equipment</label>
-      <select class="custom-select d-block w-100 " id="equipments" name="equipments" required>
-        <option value=" ">Choose...</option>
-        <option>equipment1</option>
-        <option>equipment2</option>
-      </select>
-
-    </div>
-
-  </div>
-
-  <button class="btn btn-danger btn-lg btn-block col-md-3" type="submit ">Submit Form</button>
 </div>
-  </form>
+
+<button class="btn btn-danger btn-lg btn-block col-md-3" type="submit ">Submit Form</button>
+</div>
+</form>

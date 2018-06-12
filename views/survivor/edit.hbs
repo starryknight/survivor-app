@@ -21,8 +21,8 @@
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Equipment Required</span>
-                
-                {{#each survivorInstance.equipments}}
+
+                    {{#each survivorInstance.equipments}}
                     <span class="badge badge-secondary badge-pill">Qty: {{quantity}}</span>
                 </h4>
                 <ul class="list-group mb-3">
@@ -72,8 +72,8 @@
                     </li>
 
                     <a class="btn btn-primary" href="/survivor/{{survivorInstance._id}}/medical/new" class="col-md-6 mb-3">
-                    Add new Medical state
-                </a>
+                        Add new Medical state
+                    </a>
                 </ul>
 
 
@@ -137,48 +137,40 @@
                         <label for="diagnosis"> Diagnosis
                             <span class="text-muted">(Optional)</span>
                         </label>
-                        <input type="text" class="form-control" id="diagnosis" value="{{survivorInstance.diagnosis}}" placeholder="diagnosis" >            
+                        <input type="text" class="form-control" id="diagnosis" value="{{survivorInstance.diagnosis}}" placeholder="diagnosis">
                     </div>
                 </form>
 
-            <div class="row ">
-              <div class="col-md-3 mb-3 ">
-                <label for="sex ">Sex</label>
-                <select class="custom-select d-block w-100 " id="sex" required>
-                  <option value=" ">Choose...</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-                
-              </div>
-              <div class="col-md-4 mb-3 ">
-                <label for="date ">Date Discovered</label>
-                    <input type="date " class="form-control" id="date" value="{{survivorInstance.dateOfBirth}}">
+                <div class="row ">
+                    <div class="col-md-3 mb-3 ">
+                        <label for="sex ">Sex</label>
+                        <select class="custom-select d-block w-100 " id="sex" required>
+                            <option value=" ">Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
 
-                <div class="invalid-feedback">
-                  Please provide a valid sex.
+                    </div>
+                    <div class="col-md-4 mb-3 ">
+                        <label for="date ">Date Discovered</label>
+                        <input type="date " class="form-control" id="date" value="{{survivorInstance.dateOfBirth}}">
+
+                        <div class="invalid-feedback">
+                            Please provide a valid sex.
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3 ">
+                        <label for="zip ">SSN Last 4</label>
+                        <input type="text " class="form-control " id="ssn" value="{{survivorInstance.ssn}}">
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-5 mb-3 ">
-                <label for="zip ">SSN  Last 4</label>
-                <input type="text " class="form-control " id="ssn" value="{{survivorInstance.ssn}}">
-              </div>
+        <div class="row ">
             </div>
-            <div class="row ">
-  
 
-  
-             
+                <button class="btn btn-danger btn-lg btn-block " type="submit ">Submit Form</button>
 
-
-</div>
-
-            
-            
-            <button class="btn btn-danger btn-lg btn-block " type="submit ">Submit Form</button>
-          
         </div>
-      
+
     </form>
-      
-</div>
+
+    </div>
