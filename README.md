@@ -19,6 +19,18 @@ please find the wireframe via the following link:-
 https://www.figma.com/file/OFvOgwtU5hR36ugTSVevPo9m/new?node-id=1%3A44
 
 ```
+
+## Technologies
+*mongoose
+*mongodb
+*express
+*node
+*trello
+*figma
+*bootstrap
+
+
+
 ## Trello
 
 Please find the user stories via the following link:-
