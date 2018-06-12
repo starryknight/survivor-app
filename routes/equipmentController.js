@@ -11,8 +11,12 @@ router.get('/', (req, res, next) => {
   
   Survivor.findById(req.params.survivorId)
     .then((survivor) => {
-      const equipments = survivor.equipment
+      console.log("survivor")
+
+      console.log(survivor)
+      const equipments = survivor.equipments
       res.render('equipment/index', {
+        survivorId: req.params.survivorId,
         equipments
       })
     })
@@ -22,6 +26,7 @@ router.get('/', (req, res, next) => {
 
 // NEW Route
 router.get('/new', (req, res) => {
+  
   res.render('equipment/new', {
     survivorId: req.params.survivorId
   })
@@ -29,14 +34,15 @@ router.get('/new', (req, res) => {
 
 // CREATE Route
 router.post('/', (req, res) => {
-
+  console.log(req.params)
   // make equipment req.body
   const equipment = new Equipment(req.body)
 
   // get survivor assignment by the id
   Survivor.findById(req.params.survivorId)
     .then((survivorInstance) => {
-
+      console.log('inside then')
+      console.log(survivorInstance)
       // push new equipment to equipments
       survivorInstance.equipments.push(equipment)
 
