@@ -1,9 +1,15 @@
+<h1>
+    <a href="/survivor" class="btn btn-primary">Home</a>
+</h1>
 {{#each equipments}}
+<ul class="list-group">
+    <li class="list-group-item active">Equipment Needed</li>
+    <li class="list-group-item">Type: {{type}}</li>
+    <li class="list-group-item">Size: {{size}}</li>
+    <li class="list-group-item">Quantity: {{quantity}}</li>
+</ul>
 <div>
-        {{type}} 
-    </div>
-    <div>
-{{size}}
-        </div>
-    
-    {{/each}}
+    <img src="{{picture}}" alt="">
+</div>
+
+{{/each}}

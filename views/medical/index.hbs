@@ -1,2 +1,12 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>
+    <a href="/survivor" class="btn btn-primary">Home</a>
+</h1>
+{{#each medicals}}
+<ul class="list-group">
+    <li class="list-group-item active">Medical State</li>
+    <li class="list-group-item">Type: {{type}}</li>
+    <li class="list-group-item">Frequency: {{frequency}}</li>
+    <li class="list-group-item">Quantity: {{quantity}}</li>
+</ul>
+
+{{/each}}
