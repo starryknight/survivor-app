@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
     .then(() => {
 
       // redirect to medicals
-      res.redirect(`/survivor/${req.params.survivorId}/medical`)
+      res.redirect(`/survivor/${req.params.survivorId}`)
     })
 })
 

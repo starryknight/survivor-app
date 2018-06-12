@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
     .then(() => {
 
       // redirect to equipments
-      res.redirect(`/survivor/${req.params.survivorId}/equipment`)
+      res.redirect(`/survivor/${req.params.survivorId}`)
     })
 })
 
